@@ -1,4 +1,10 @@
-﻿using System;
+﻿/* *********************************
+ * Briver.AspNetCore
+ * 此文件作为WebApi的入口，将请求转发给ApiHandler来处理
+ * 
+ * ********************************/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,13 +14,13 @@ using Briver.Logging;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Briver.WebApp.Api
+namespace Briver.AspNetCore
 {
     /// <summary>
     /// 通用的API入口
     /// </summary>
     [ApiController]
-    [Route("[Controller]")]
+    [Route("Api")]
     public class ApiController : ControllerBase
     {
         /// <summary>

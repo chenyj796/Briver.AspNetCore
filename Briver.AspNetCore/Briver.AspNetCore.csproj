@@ -19,7 +19,6 @@
     <DocumentationFile>$(OutputPath)$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
 
-
   <ItemGroup>
     <PackageReference Include="Briver" Version="1.2.0" />
     <PackageReference Include="Briver.ProjectTasks" Version="1.1.1">
@@ -30,5 +29,14 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Properties\Package\**" Pack="True" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Properties\Package\content\ApiController.cs" />
+  </ItemGroup>
+
 
 </Project>
