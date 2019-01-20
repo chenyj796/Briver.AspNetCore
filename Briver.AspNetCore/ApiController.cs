@@ -14,8 +14,7 @@ namespace Briver.WebApp.Api
     /// 通用的API入口
     /// </summary>
     [ApiController]
-    [Route("api")]
-    [Route("api/v{version:ApiVersion}")]
+    [Route("[Controller]")]
     public class ApiController : ControllerBase
     {
         /// <summary>
