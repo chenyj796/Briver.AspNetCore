@@ -11,8 +11,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-[assembly: CompositionSupported]
-
 namespace Briver.WebApp
 {
     public class Startup
