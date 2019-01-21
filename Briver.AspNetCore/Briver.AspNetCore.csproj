@@ -21,7 +21,7 @@
 
   <ItemGroup>
     <PackageReference Include="Briver" Version="1.2.0" />
-    <PackageReference Include="Briver.ProjectTasks" Version="1.1.1">
+    <PackageReference Include="Briver.ProjectTasks" Version="1.2.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
@@ -39,7 +39,7 @@
   </ItemGroup>
 
   <Target Name="CopyNupkg" AfterTargets="Pack">
-    <Message Text="xcopy $(ProjectDir)$(PackageOutputPath)$(PackageId).$(PackageVersion).nupkg $(ProjectDir)..\..\" Importance="high"/>
+    <Message Text="xcopy $(ProjectDir)$(PackageOutputPath)$(PackageId).$(PackageVersion).nupkg $(ProjectDir)..\..\" Importance="high" />
     <Exec Command="xcopy $(ProjectDir)$(PackageOutputPath)$(PackageId).$(PackageVersion).nupkg $(ProjectDir)..\..\ /I /Y /Q" />
   </Target>
 
