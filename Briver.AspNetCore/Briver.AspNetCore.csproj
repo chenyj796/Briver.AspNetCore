@@ -38,5 +38,10 @@
     <Compile Remove="Properties\Package\content\ApiController.cs" />
   </ItemGroup>
 
+  <Target Name="CopyNupkg" AfterTargets="Pack">
+    <Message Text="xcopy $(ProjectDir)$(PackageOutputPath)$(PackageId).$(PackageVersion).nupkg $(ProjectDir)..\..\" Importance="high"/>
+    <Exec Command="xcopy $(ProjectDir)$(PackageOutputPath)$(PackageId).$(PackageVersion).nupkg $(ProjectDir)..\..\ /I /Y /Q" />
+  </Target>
+
 
 </Project>
