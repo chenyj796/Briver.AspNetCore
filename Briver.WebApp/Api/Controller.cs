@@ -15,7 +15,7 @@ namespace Briver.WebApp.Api
     /// 通用的API入口
     /// </summary>
     [ApiController]
-    [Route("[Controller]")]
+    [Route("Api")]
     public class ApiController : ControllerBase
     {
         /// <summary>
@@ -30,7 +30,7 @@ namespace Briver.WebApp.Api
         public async Task<IActionResult> InvokeAsync(string apiName,
             int pageSize = 50, int pageIndex = 0)
         {
-            Logger.Debug($"收到请求{Request.}");
+            Logger.Debug($"收到请求{Request.Path}");
             if (!ApiHandler.TryGet(apiName, out var handler))
             {
                 return NotFound();
